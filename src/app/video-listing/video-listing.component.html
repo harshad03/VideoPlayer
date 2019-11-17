@@ -1,0 +1,6 @@
+<ngx-slick-carousel class="carousel" [config]="slideConfig">
+<div ngxSlickItem *ngFor="let vd of video_list" class="slide">
+  <span class="title"> {{vd.name | uppercase}}</span>
+<img src="{{ vd.poster }}" alt="" width="100%" (click)="setVideoUrl(vd.trailer)">
+</div>
+</ngx-slick-carousel>

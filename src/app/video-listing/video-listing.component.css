@@ -1,0 +1,13 @@
+img
+{
+    width: 350px;
+    height: 150px;
+    cursor: pointer;
+}
+.title
+{
+    position: relative;
+    left: 5px;
+    color: white;
+}
+ 

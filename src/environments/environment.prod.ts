@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  api:'https://valuefy-assignment-x.herokuapp.com/api/'
 };

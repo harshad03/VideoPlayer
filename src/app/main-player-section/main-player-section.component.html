@@ -1,0 +1,32 @@
+
+ 
+
+
+
+<div class="my-container" >
+ <!--toast msg-->
+    <div class="toast show" style="position: absolute; top: 0; right: 0;" *ngIf="errmsg!=''">
+        <div class="toast-header">
+            <strong class="mr-auto">Serve Error</strong>
+          <button type="button" class="ml-2 mb-1 close" (click)="errmsg=''">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="toast-body">
+        {{errmsg}} 
+        </div>
+      </div>
+  <!--end toast msg-->
+
+  <div class="row ml-0 mr-0">
+    <div class="player d-flex justify-content-center  w-100 ">
+      <iframe *ngIf="video_url" [src]="video_url | sanitizeHtml"></iframe>
+    </div>
+  </div>
+  <div class="row ml-0 mr-0">
+    <div class="player-list">
+      <app-video-listing *ngIf="video_data.length" [video_list]="video_data" (videoUrl)="changeVideo($event)">
+      </app-video-listing>
+    </div>
+  </div>
+</div>
